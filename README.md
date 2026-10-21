@@ -39,5 +39,5 @@ All calculated figures are theoretical estimates based on hardware architecture 
 
 ## 💬 Community & Socials
 
-- 📢 **Telegram Group:** [Join G-OC Community](https://t.me/+3nGi0kP7A3wyMWl8)
+- 📢 **Telegram Group:** [Join G-OC Community](https://t.me/+3nGi0kP7A3wyMWI8)
 - 📷 **Instagram:** [@xtrizer_ghost](https://www.instagram.com/xtrizer_ghost/)
