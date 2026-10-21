@@ -23,11 +23,12 @@ A lightweight Windows utility designed for PC enthusiasts and overclockers. It c
 
 
 ## 📥 Downloads & Releases
+You can download the compiled standalone binary (`.exe`) directly from the Releases Page:
 
-You can download the compiled standalone binary (`.exe`) directly from the [Releases Page](./releases):
+- **[Releases Page](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases)** – View all release versions.
+- **[Download Beta 2 (Latest Release)](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases/tag/v1.0.0-beta2)** – Improved UI layout and visual hierarchy.
+- **[Download Beta 1](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases/tag/v1.0.0-beta1)** – Initial test build.
 
-- **[Download Beta 2 (Latest Release)](./releases/tag/v1.0.0-beta2)** – Improved UI layout and visual hierarchy.
-- **[Download Beta 1](./releases/tag/v1.0.0-beta1)** – Initial test build.
 
 
 ## ⚠️ Disclaimer
