@@ -29,8 +29,8 @@ A lightweight Windows utility designed for PC enthusiasts, overclockers, and har
 
 You can download the compiled standalone binary (`.exe`) directly from the Releases Page:
 
-* 🚀 **[Download Latest Release (Beta 3)](https://github.com/xtrizer_ghost/G-OC-Calculator/releases/tag/v1.0.0-beta3)** – Gets you the most recent build automatically.
-* 📂 **[View All Releases (Beta 1, Beta 2 & Beta 3)](https://github.com/xtrizer_ghost/G-OC-Calculator/releases)** – Browse all available versions and changelogs.
+* 🚀 **[Download Latest Release (Beta 3)](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases/tag/v2.0.1-beta3)** – Gets you the most recent build automatically.
+* 📂 **[View All Releases (Beta 1, Beta 2 & Beta 3)](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases)** – Browse all available versions and changelogs.
 
 
 ## ⚠️ Disclaimer
@@ -40,5 +40,5 @@ All calculated figures are theoretical estimates based on hardware architecture 
 
 ## 💬 Community & Socials
 
-* 📢 **Telegram Group:** [Join G-OC Community](https://t.me/your_telegram_link)
+* 📢 **Telegram Group:** [Join G-OC Community](https://t.me/+3nGi0kP7A3wyMWI8)
 * 📷 **Instagram:** [@xtrizer_ghost](https://instagram.com/xtrizer_ghost)
