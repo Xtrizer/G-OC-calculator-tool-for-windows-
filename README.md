@@ -1,6 +1,5 @@
 # ⚡ GPU OC Calculator & Power Estimator
 
-# ⚡ GPU OC Calculator & Power Estimator
 
 ![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS-0078D6?style=for-the-badge&logo=windows)
 ![Release](https://img.shields.io/badge/RELEASE-V1.0.0--BETA3-2EA44F?style=for-the-badge)
