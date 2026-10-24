@@ -1,32 +1,37 @@
 # ⚡ GPU OC Calculator & Power Estimator
 
-![Windows](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows)
-![Version](https://img.shields.io/badge/Release-v1.0.0--beta2-brightgreen?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In_Development-orange?style=for-the-badge)
+# ⚡ GPU OC Calculator & Power Estimator
 
-A lightweight Windows utility designed for PC enthusiasts and overclockers. It calculates theoretical GPU overclocking performance gains (Compute TFLOPS & Memory Bandwidth scaling), estimates total system PSU power draw, and flags potential instability risks before applying settings.
+![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS-0078D6?style=for-the-badge&logo=windows)
+![Release](https://img.shields.io/badge/RELEASE-V1.0.0--BETA3-2EA44F?style=for-the-badge)
+![Status](https://img.shields.io/badge/STATUS-IN_DEVELOPMENT-E3B341?style=for-the-badge)
 
+A lightweight Windows utility designed for PC enthusiasts, overclockers, and hardware modders. It calculates theoretical GPU overclocking performance gains (Compute TFLOPS & Memory Bandwidth scaling), estimates total system PSU power draw, and flags potential instability risks or hardware restrictions before applying settings.
+
+---
 
 ## 📸 Screenshots
 
-<img width="1350" height="959" alt="Screenshot 2026-10-21 205851" src="https://github.com/user-attachments/assets/468bf31f-2120-4822-8511-b99085f3d471" />
+<img width="1045" height="1039" alt="Screenshot 2026-10-24 141105" src="https://github.com/user-attachments/assets/a968c326-0a58-4cd5-a6fa-4b7e3cd4f835" />
 
 
 
-## 🔥 Key Features
+## 🔑 Key Features
 
-- **🚀 Performance Boost Estimator:** Calculates theoretical TFLOPS increases and Memory Bandwidth scaling (GB/s).
-- **⚡ PSU & Power Load Check:** Estimates actual power drawn from the wall (AC), heat loss, and recommended PSU wattage under full load.
-- **⚠️ Smart Safety Alerts:** Detects aggressive core gain thresholds and triggers warnings to prevent system crashes.
-- **🎨 Dual-View Comparison:** Clean, dark-mode layout displaying Stock vs. Overclocked metrics side-by-side.
-
+* 🚀 **Performance Boost Estimator:** Calculates theoretical TFLOPS increases, memory speed scaling (Gbps), and Memory Bandwidth scaling (GB/s) side-by-side.
+* ⚡ **PSU & Power Load Check:** Estimates actual power drawn from the wall (AC), heat loss, and recommended PSU wattage under full load with 80 Plus efficiency curves.
+* 🔍 **Deep PnP Hardware Inspector:** Automatically queries real GPU specs, VRAM size, and driver versions—with built-in support for Optimus laptops.
+* 🛡️ **Smart Hardware Restrictions:** Detects non-overclockable architectures (such as NVS, Quadro NVS, and RX Vega 64), automatically locking input fields to prevent hardware risks.
+* 💡 **Architectural Guidance:** Provides tailored overclocking advice, architecture notes, and special hardware modding rules (e.g., RX Vega 56 VBIOS flashing).
+* 🎨 **Dynamic Vendor Theming:** Automatically adapts UI accent colors to NVIDIA (Green), AMD (Red), or Intel (Blue).
 
 
 ## 📥 Downloads & Releases
+
 You can download the compiled standalone binary (`.exe`) directly from the Releases Page:
 
-- 🚀 **[Download Latest Release (Beta 2)](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases/latest)** – Gets you the most recent build automatically.
-- 📂 **[View All Releases (Beta 1 & Beta 2)](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases)** – Browse all available versions and changelogs.
+* 🚀 **[Download Latest Release (Beta 3)](https://github.com/xtrizer_ghost/G-OC-Calculator/releases/tag/v1.0.0-beta3)** – Gets you the most recent build automatically.
+* 📂 **[View All Releases (Beta 1, Beta 2 & Beta 3)](https://github.com/xtrizer_ghost/G-OC-Calculator/releases)** – Browse all available versions and changelogs.
 
 
 ## ⚠️ Disclaimer
@@ -34,8 +39,7 @@ You can download the compiled standalone binary (`.exe`) directly from the Relea
 All calculated figures are theoretical estimates based on hardware architecture specs. Real-world FPS scaling and system stability heavily depend on your GPU's silicon quality and overall cooling capacity. Always benchmark and stress-test carefully!
 
 
-
 ## 💬 Community & Socials
 
-- 📢 **Telegram Group:** [Join G-OC Community](https://t.me/+3nGi0kP7A3wyMWI8)
-- 📷 **Instagram:** [@xtrizer_ghost](https://www.instagram.com/xtrizer_ghost/)
+* 📢 **Telegram Group:** [Join G-OC Community](https://t.me/your_telegram_link)
+* 📷 **Instagram:** [@xtrizer_ghost](https://instagram.com/xtrizer_ghost)
