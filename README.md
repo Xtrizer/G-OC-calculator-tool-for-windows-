@@ -3,9 +3,9 @@
 ![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS_10%20%2F%2011-0078D6?style=for-the-badge&logo=windows)
 ![Release](https://img.shields.io/badge/RELEASE-V2.0.1--BETA3-2EA44F?style=for-the-badge)
 ![Status](https://img.shields.io/badge/STATUS-IN_DEVELOPMENT-E3B341?style=for-the-badge)
-![License](https://img.shields.io/badge/LICENSE-FREEWARE-8957E5?style=for-the-badge)
+![License](https://img.shields.io/badge/LICENSE-MIT-8957E5?style=for-the-badge)
 
-**Plan a GPU overclock before you touch a single slider.** G-OC Calculator estimates the memory bandwidth and compute gain of an overclock, how much extra power it will draw, and whether your power supply can handle it. It is free, portable, and runs fully offline.
+**Plan a GPU overclock before you touch a single slider.** G-OC Calculator estimates the memory bandwidth and compute gain of an overclock, how much extra power it will draw, and whether your power supply can handle it. It is free, open source, portable, and runs fully offline.
 
 > **It is a calculator, not an overclocking tool.** The app never changes your GPU settings, clocks, voltage or BIOS. "APPLY OC" only runs the calculation.
 
@@ -82,7 +82,7 @@ If SmartScreen appears: click **More info**, then **Run anyway**. Antivirus prog
 ## 🔒 What the app does on your PC
 
 * Runs **two read-only Windows PowerShell queries** (`Get-CimInstance Win32_PnPEntity` and `Win32_VideoController`) to read the GPU name, VRAM size and driver version.
-* Contains **no networking code**. It does not connect to the internet or send any data anywhere.
+* Contains **no networking code**. It does not connect to the internet or send any data anywhere. You can check this yourself: the full source is in [`main.py`](main.py).
 * Does **not** change GPU clocks, voltage, fan speed or BIOS, and does not install drivers or services.
 * Writes a file only when you export a preset.
 
@@ -113,9 +113,24 @@ Overclocking, raising voltage and flashing a BIOS can damage hardware and void w
 
 ---
 
+## 🛠️ Build from source
+
+The app is a single Python file built with [Kivy](https://kivy.org). It was built with Python 3.12.
+
+```powershell
+py -3.12 -m pip install -r requirements.txt pyinstaller
+py -3.12 -m PyInstaller --onefile --windowed --name G-OC-Calculator main.py
+```
+
+The `.exe` appears in `dist\`. To just run it without building: `py -3.12 main.py`.
+
+> PyInstaller builds are not bit-for-bit reproducible, so an exe you build yourself will have a different SHA-256 from the one published in the releases.
+
+---
+
 ## 📄 License
 
-G-OC Calculator is **freeware**: free to use and to redistribute unmodified. The source code is not published. See [LICENSE](LICENSE) for the full terms and third-party notices.
+Released under the **MIT License**. See [LICENSE](LICENSE). The released `.exe` also bundles Kivy (MIT), Python (PSF License), SDL2 (zlib) and the PyInstaller bootloader (GPL-2.0 with the bootloader exception).
 
 ---
 
@@ -124,4 +139,5 @@ G-OC Calculator is **freeware**: free to use and to redistribute unmodified. The
 * 📢 **Telegram group:** [Join G-OC Community](https://t.me/+3nGi0kP7A3wyMWI8)
 * 📷 **Instagram:** [@xtrizer_ghost](https://instagram.com/xtrizer_ghost)
 * 🐞 **Found a bug or have a request?** [Open an issue](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/issues). Please include your GPU model, Windows version and a screenshot.
+* 🤝 **Pull requests are welcome**, especially for GPU data, architecture notes and bug fixes.
 * ⭐ If the tool helped you, a star on this repository helps other people find it.
