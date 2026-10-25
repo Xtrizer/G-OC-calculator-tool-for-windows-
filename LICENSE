@@ -1,0 +1,42 @@
+G-OC Calculator - Freeware License
+
+Copyright (c) 2026 Xtrizer. All rights reserved.
+
+1. GRANT
+   Permission is granted to use G-OC Calculator (the "Software") free of
+   charge, for personal and commercial purposes, on any number of computers.
+
+2. REDISTRIBUTION
+   You may redistribute the Software, free of charge, as long as it is
+   unmodified, complete, and accompanied by this license. You may not sell
+   it, or include it in a paid product or bundle, without written permission.
+
+3. RESTRICTIONS
+   The source code of the Software is not published. Unless the law of your
+   country says you may not be prevented from doing so, you may not modify,
+   decompile, or reverse engineer the Software, or remove this license or
+   the copyright notice from it.
+
+4. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+   All results are theoretical estimates. They are not a guarantee of the
+   performance, stability or safety of any hardware.
+
+5. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OF THE
+   SOFTWARE. This includes damage to graphics cards, power supplies or other
+   hardware, loss of data, or voided warranties caused by overclocking,
+   voltage changes, or BIOS flashing. You overclock at your own risk.
+
+6. THIRD-PARTY COMPONENTS
+   The executable bundles open-source components, each under its own license:
+   - Kivy (MIT License) - https://kivy.org
+   - Python (Python Software Foundation License) - https://www.python.org
+   - SDL2 and related libraries (zlib License) - https://libsdl.org
+   - PyInstaller bootloader (GPL-2.0 with the PyInstaller bootloader
+     exception) - https://pyinstaller.org
+   Their licenses apply to those components only, not to the Software itself.
