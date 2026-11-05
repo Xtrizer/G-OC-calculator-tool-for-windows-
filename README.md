@@ -13,7 +13,8 @@
 
 ## 📸 Screenshots
 
-<img width="1045" height="1039" alt="G-OC Calculator, AMD theme" src="https://github.com/user-attachments/assets/a968c326-0a58-4cd5-a6fa-4b7e3cd4f835" />
+<img width="1281" height="992" alt="Screenshot 2026-11-04 213555" src="https://github.com/user-attachments/assets/f6e1b9b0-cb03-4569-8bb4-23c9f046f29c" />
+
 
 The default theme changes its accent color to match your card: **NVIDIA (green)**, **AMD (red)**, **Intel (blue/purple)**. Ten themes are included (see *Themes* below).
 
