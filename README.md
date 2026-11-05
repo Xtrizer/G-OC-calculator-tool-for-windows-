@@ -9,16 +9,22 @@
 
 > **It is a calculator, not an overclocking tool.** The app never changes your GPU settings, clocks, voltage or BIOS. "APPLY OC" only runs the calculation.
 
----
 
 ## 📸 Screenshots
 
-<img width="1281" height="992" alt="Screenshot 2026-11-04 213555" src="https://github.com/user-attachments/assets/f6e1b9b0-cb03-4569-8bb4-23c9f046f29c" />
-
+<img width="1281" height="992" alt="Screenshot 2026-11-04 213555" src="https://github.com/user-attachments/assets/d7fa5695-9a3f-4852-a723-d6b0fb12498a" />
+<img width="1193" height="975" alt="Screenshot 2026-11-04 213514" src="https://github.com/user-attachments/assets/cc7ecf0b-445c-46e6-9a53-e63c54bedd4b" />
+<img width="1251" height="989" alt="Screenshot 2026-11-04 213349" src="https://github.com/user-attachments/assets/ef0feea7-b740-4e6e-a9e3-a318302e56cc" />
+<img width="1216" height="976" alt="Screenshot 2026-11-04 213337" src="https://github.com/user-attachments/assets/1e320b7d-47e5-42e7-b751-283eefdc57fe" />
+<img width="1207" height="988" alt="Screenshot 2026-11-04 213325" src="https://github.com/user-attachments/assets/33ebd909-36b0-4d00-bf40-95ccbfc2a535" />
+<img width="1179" height="972" alt="Screenshot 2026-11-04 213316" src="https://github.com/user-attachments/assets/7afe64ce-8b56-48df-b92d-5f88efd89c4d" />
+<img width="1190" height="1003" alt="Screenshot 2026-11-04 213306" src="https://github.com/user-attachments/assets/fc5e0377-c94a-4856-b9df-2454f34477ea" />
+<img width="1246" height="991" alt="Screenshot 2026-11-04 213133" src="https://github.com/user-attachments/assets/e680cfb9-5c5d-47e7-9cfa-ef8e31a5fe9e" />
+<img width="1315" height="1011" alt="Screenshot 2026-11-04 213041" src="https://github.com/user-attachments/assets/fe6efde7-2018-4ac0-8a32-63f6d48a1247" />
+<img width="1238" height="999" alt="Screenshot 2026-11-04 213020" src="https://github.com/user-attachments/assets/ff529817-42a2-4790-a24d-184049e620ea" />
+<img width="1310" height="1046" alt="Screenshot 2026-11-04 212901" src="https://github.com/user-attachments/assets/ad57ba86-6993-450e-a146-207fb97fe999" />
 
 The default theme changes its accent color to match your card: **NVIDIA (green)**, **AMD (red)**, **Intel (blue/purple)**. Ten themes are included (see *Themes* below).
-
----
 
 ## 🔑 Key Features
 
@@ -33,7 +39,6 @@ The default theme changes its accent color to match your card: **NVIDIA (green)*
 * 💾 **Presets.** Export and import your overclock settings to a file so you can switch between profiles quickly. A laptop profile is included.
 * ⚠️ **Alerts.** Warnings for unrealistic gains, high voltage, PSU load above 80% / 90% / 100%, and laptop thermal limits.
 
----
 
 ## 📥 Download
 
@@ -44,7 +49,6 @@ The default theme changes its accent color to match your card: **NVIDIA (green)*
 
 All versions: [Releases page](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases).
 
----
 
 ## 🖥️ Requirements
 
@@ -59,7 +63,6 @@ All versions: [Releases page](https://github.com/Xtrizer/G-OC-calculator-tool-fo
 
 Beta 3 was tested on 5 different PCs. Beta 4 is a beta: please report any problem you find.
 
----
 
 ## 🔐 Verify your download
 
@@ -81,7 +84,6 @@ The hash must match exactly. If it does not, do not run the file. The same value
 
 If SmartScreen appears: click **More info**, then **Run anyway**. Antivirus programs sometimes flag single-file apps built with PyInstaller as false positives. If that happens, you can check the file on [VirusTotal](https://www.virustotal.com) before running it.
 
----
 
 ## 🔒 What the app does on your PC
 
@@ -90,13 +92,10 @@ If SmartScreen appears: click **More info**, then **Run anyway**. Antivirus prog
 * Does **not** change GPU clocks, voltage, fan speed or BIOS, and does not install drivers or services.
 * Writes files only when you export a preset, press SAVE CONFIG, or change the theme (small `.json` files next to the program).
 
----
-
 ## 🧩 About the COMPATIBILITY estimates
 
 CPU and GPU strength are rough gaming indexes (GTX 1060 6GB = 100) used only to compare parts, PCIe loss is a heuristic based on link bandwidth, card design (x4 / x8 / x16) and VRAM size, and overclock gains use simple scaling factors. They are **not benchmarks**. Real results depend on the game, RAM, BIOS, drivers and cooling.
 
----
 
 ## 🧮 How the numbers are calculated
 
@@ -113,7 +112,6 @@ CPU and GPU strength are rough gaming indexes (GTX 1060 6GB = 100) used only to 
 
 Memory type multipliers: SDR ×1, DDR1 / DDR2 / DDR3 / DDR4 / GDDR2 / GDDR3 / GDDR4 ×2, GDDR5 ×4, GDDR5X and GDDR6 ×8, GDDR6X ×16, GDDR7 ×16, HBM / HBM2 / HBM3 ×2. Use the memory clock as shown in GPU-Z.
 
----
 
 ## ⚠️ Disclaimer
 
@@ -121,7 +119,6 @@ All figures are **theoretical estimates** based on hardware specifications. Real
 
 Overclocking, raising voltage and flashing a BIOS can damage hardware and void warranties. Use this tool at your own risk. See the [license](LICENSE).
 
----
 
 ## 🛠️ Build from source
 
@@ -136,13 +133,11 @@ The `.exe` appears in `dist\`. To just run it without building: `py -3.12 main.p
 
 > PyInstaller builds are not bit-for-bit reproducible, so an exe you build yourself will have a different SHA-256 from the one published in the releases.
 
----
 
 ## 📄 License
 
 Released under the **MIT License**. See [LICENSE](LICENSE). The released `.exe` also bundles Kivy (MIT), Python (PSF License), SDL2 (zlib) and the PyInstaller bootloader (GPL-2.0 with the bootloader exception).
 
----
 
 ## 💬 Community and feedback
 
