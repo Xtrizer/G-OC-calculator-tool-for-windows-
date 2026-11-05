@@ -1,11 +1,11 @@
 # ⚡ G-OC Calculator — GPU Overclock & Power Estimator
 
 ![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS_10%20%2F%2011-0078D6?style=for-the-badge&logo=windows)
-![Release](https://img.shields.io/badge/RELEASE-V2.0.1--BETA3-2EA44F?style=for-the-badge)
+![Release](https://img.shields.io/badge/RELEASE-V2.0.2--BETA4-2EA44F?style=for-the-badge)
 ![Status](https://img.shields.io/badge/STATUS-IN_DEVELOPMENT-E3B341?style=for-the-badge)
 ![License](https://img.shields.io/badge/LICENSE-MIT-8957E5?style=for-the-badge)
 
-**Plan a GPU overclock before you touch a single slider.** G-OC Calculator estimates the memory bandwidth and compute gain of an overclock, how much extra power it will draw, and whether your power supply can handle it. It is free, open source, portable, and runs fully offline.
+**Plan a GPU overclock before you touch a single slider.** G-OC Calculator estimates the memory bandwidth and compute gain of an overclock, how much extra power it will draw, whether your power supply can handle it, and whether your CPU and PCIe slot suit the card. It is free, open source, portable, and runs fully offline.
 
 > **It is a calculator, not an overclocking tool.** The app never changes your GPU settings, clocks, voltage or BIOS. "APPLY OC" only runs the calculation.
 
@@ -15,7 +15,7 @@
 
 <img width="1045" height="1039" alt="G-OC Calculator, AMD theme" src="https://github.com/user-attachments/assets/a968c326-0a58-4cd5-a6fa-4b7e3cd4f835" />
 
-The interface changes its accent color to match your card: **NVIDIA (green)**, **AMD (red)**, **Intel (blue/purple)**.
+The default theme changes its accent color to match your card: **NVIDIA (green)**, **AMD (red)**, **Intel (blue/purple)**. Ten themes are included (see *Themes* below).
 
 ---
 
@@ -23,6 +23,9 @@ The interface changes its accent color to match your card: **NVIDIA (green)**, *
 
 * 🚀 **Performance estimator.** Stock vs overclock for memory speed (Gbps), memory bandwidth (GB/s) and compute (TFLOPS), shown side by side with bars.
 * ⚡ **PSU and power check.** Estimated GPU power at the new clocks and voltage, total system power, PSU load, recommended PSU wattage, power drawn from the wall using 80 Plus efficiency curves, and heat lost.
+* 📚 **GPU CATEGORY (new in beta 4).** An offline list of 259 graphics cards (NVIDIA, AMD, Intel) sorted weakest to strongest. Tap a card and the fields fill in. 146 entries are cross-checked against published bandwidth and TFLOPS figures; the others are marked **UNVERIFIED** (community-sourced, compare with GPU-Z).
+* 🧩 **COMPATIBILITY (new in beta 4).** Type a CPU (312 desktop models) and a GPU, at stock or overclocked clocks. It shows the PCIe generation and lanes (matched or reduced), the estimated PCIe loss, the estimated CPU bottleneck at 720p / 1080p / 1440p / 4K, GPU-limited headroom, what-if tables and a PSU hint. AGP / PCI / onboard graphics are reported as "does not fit". All of these numbers are **estimates** from a built-in model, not benchmarks.
+* 🎨 **Themes (new in beta 4).** Default, Retro Silver, Windows XP, Windows 98, MSI, ASUS, Aero, Glass, White and Core Extreme. Use the small THEMES button in the top right corner.
 * 🔍 **Hardware inspector.** Reads your GPU name, VRAM size and driver version from Windows, including secondary GPUs on Optimus laptops.
 * 🛡️ **Locked-card detection.** Cards known to be non-overclockable (NVS, Quadro NVS, RX Vega 64) lock the input fields and show a clear alert.
 * 💡 **Architecture guidance.** Notes for Fermi through Blackwell, RDNA and Intel Arc, plus special notes (for example the RX Vega 56 BIOS flash and its Samsung-memory requirement) and advice to raise clocks in small 10-15 MHz steps.
@@ -33,8 +36,8 @@ The interface changes its accent color to match your card: **NVIDIA (green)**, *
 
 ## 📥 Download
 
-1. Go to the **[latest release (v2.0.1-beta3)](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases/tag/v2.0.1-beta3)**.
-2. Download **`G-OC-Calculator.beta.3.exe`** (about 18.6 MB).
+1. Go to the **[latest release (v2.0.2-beta4)](https://github.com/Xtrizer/G-OC-calculator-tool-for-windows-/releases/tag/v2.0.2-beta4)**.
+2. Download **`G-OC-calculator.exe`**.
 3. *(Recommended)* [verify the download](#-verify-your-download).
 4. Double-click the file. There is nothing to install.
 
@@ -53,7 +56,7 @@ All versions: [Releases page](https://github.com/Xtrizer/G-OC-calculator-tool-fo
 | **Hardware detection** | Uses built-in Windows PowerShell. If detection fails, you can type every value by hand |
 | **Disk space** | About 20 MB |
 
-Tested on 5 different PCs without problems.
+Beta 3 was tested on 5 different PCs. Beta 4 is a beta: please report any problem you find.
 
 ---
 
@@ -61,16 +64,16 @@ Tested on 5 different PCs without problems.
 
 The executable is not code-signed, so Windows SmartScreen may show "Windows protected your PC". Check that the file is the one published here by comparing its SHA-256 fingerprint.
 
-**`G-OC-Calculator.beta.3.exe`**
+**`G-OC-calculator.exe`**
 
 ```
-d6eab0154542987b0369e52d7b8dc31505050790d74290d3da548e6f164d9fbf
+3dfc7cc71459be1e6cc7a002f80b4193a2bfa36100b6b754e5dfddcb582202f2
 ```
 
 In PowerShell, run:
 
 ```powershell
-Get-FileHash .\G-OC-Calculator.beta.3.exe -Algorithm SHA256
+Get-FileHash .\G-OC-calculator.exe -Algorithm SHA256
 ```
 
 The hash must match exactly. If it does not, do not run the file. The same value is in [`SHA256SUMS.txt`](SHA256SUMS.txt).
@@ -84,7 +87,13 @@ If SmartScreen appears: click **More info**, then **Run anyway**. Antivirus prog
 * Runs **two read-only Windows PowerShell queries** (`Get-CimInstance Win32_PnPEntity` and `Win32_VideoController`) to read the GPU name, VRAM size and driver version.
 * Contains **no networking code**. It does not connect to the internet or send any data anywhere. You can check this yourself: the full source is in [`main.py`](main.py).
 * Does **not** change GPU clocks, voltage, fan speed or BIOS, and does not install drivers or services.
-* Writes a file only when you export a preset.
+* Writes files only when you export a preset, press SAVE CONFIG, or change the theme (small `.json` files next to the program).
+
+---
+
+## 🧩 About the COMPATIBILITY estimates
+
+CPU and GPU strength are rough gaming indexes (GTX 1060 6GB = 100) used only to compare parts, PCIe loss is a heuristic based on link bandwidth, card design (x4 / x8 / x16) and VRAM size, and overclock gains use simple scaling factors. They are **not benchmarks**. Real results depend on the game, RAM, BIOS, drivers and cooling.
 
 ---
 
@@ -101,7 +110,7 @@ If SmartScreen appears: click **More info**, then **Run anyway**. Antivirus prog
 | Recommended PSU | system power ÷ 0.8, rounded up to the next 50 W |
 | Wall power | system power ÷ PSU efficiency (80 Plus curve, interpolated by load) |
 
-Memory type multipliers: DDR2 / DDR3 / GDDR3 ×2, GDDR5 ×4, GDDR5X and GDDR6 ×8, GDDR6X ×16, GDDR7 ×32, HBM / HBM2 / HBM3 ×2. Use the memory clock as shown in GPU-Z.
+Memory type multipliers: SDR ×1, DDR1 / DDR2 / DDR3 / DDR4 / GDDR2 / GDDR3 / GDDR4 ×2, GDDR5 ×4, GDDR5X and GDDR6 ×8, GDDR6X ×16, GDDR7 ×16, HBM / HBM2 / HBM3 ×2. Use the memory clock as shown in GPU-Z.
 
 ---
 
@@ -119,7 +128,7 @@ The app is a single Python file built with [Kivy](https://kivy.org). It was buil
 
 ```powershell
 py -3.12 -m pip install -r requirements.txt pyinstaller
-py -3.12 -m PyInstaller --onefile --windowed --name G-OC-Calculator main.py
+py -3.12 -m PyInstaller --onefile --windowed --name G-OC-calculator main.py
 ```
 
 The `.exe` appears in `dist\`. To just run it without building: `py -3.12 main.py`.
