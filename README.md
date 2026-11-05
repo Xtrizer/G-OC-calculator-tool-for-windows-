@@ -1,4 +1,4 @@
-# ⚡ G-OC Calculator — GPU Overclock & Power Estimator
+# ⚡ G-OC Calculator — GPU Overclock & Power Estimator with improvements in useing
 
 ![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS_10%20%2F%2011-0078D6?style=for-the-badge&logo=windows)
 ![Release](https://img.shields.io/badge/RELEASE-V2.0.2--BETA4-2EA44F?style=for-the-badge)
